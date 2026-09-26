@@ -39,11 +39,11 @@ ENV PATH="/opt/oss-cad/bin:${PATH}"
 
 
 # KLayout (optional)
-RUN set -eux; \
-  curl -L -o /tmp/klayout.deb \
-    https://www.klayout.org/downloads/Ubuntu-22/klayout_0.29.0-1_amd64.deb; \
-  apt-get update && apt-get install -y --no-install-recommends /tmp/klayout.deb; \
-  rm -rf /var/lib/apt/lists/* /tmp/klayout.deb
+# RUN set -eux; \
+#   curl -L -o /tmp/klayout.deb \
+#     https://www.klayout.org/downloads/Ubuntu-22/klayout_0.29.0-1_amd64.deb; \
+#   apt-get update && apt-get install -y --no-install-recommends /tmp/klayout.deb; \
+#   rm -rf /var/lib/apt/lists/* /tmp/klayout.deb
 
 # -------- OpenROAD from your custom .deb --------
 ARG OPENROAD_DEB_URL="https://vsd-labs.sgp1.cdn.digitaloceanspaces.com/vsd-labs/openroad_2.0+custom+20251027_amd64.deb"
